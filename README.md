@@ -1,6 +1,8 @@
-# requireg  [![Build Status](https://secure.travis-ci.org/h2non/requireg.png?branch=master)][2] [![NPM version](https://badge.fury.io/js/requireg.png)][3]
+# requireg-ext  [![Build Status](https://secure.travis-ci.org/prantlf/requireg.png?branch=master)][2] [![NPM version](https://badge.fury.io/js/requireg.png)][3]
 
-Require and resolve global modules in node/io.js like a boss
+Require and resolve global modules in node/io.js like a boss.
+
+This fork upgrades NPM module dependencies, which showed security vulnerabilities.
 
 ## Differences with require()
 
@@ -26,7 +28,7 @@ Supported locations:
 ## Installation
 
 ```
-$ npm install requireg --save[-dev]
+$ npm install requireg-ext --save[-dev]
 ```
 
 ## Usage
@@ -34,7 +36,7 @@ $ npm install requireg --save[-dev]
 ### Load global modules
 
 ```js
-var requireg = require('requireg')
+var requireg = require('requireg-ext')
 // require a globally installed package
 var npm = requireg('npm')
 ```
@@ -49,7 +51,7 @@ var modulePath = requireg.resolve('npm')
 ### Globalize it
 
 ```js
-require('requireg').globalize()
+require('requireg-ext').globalize()
 ```
 
 Now it is globally available from any source file
@@ -80,6 +82,6 @@ I hope you know exactly what you do with `requireg`
 Released under MIT license
 
 [1]: http://nodejs.org/docs/latest/api/modules.html#modules_all_together
-[2]: http://travis-ci.org/h2non/requireg
+[2]: http://travis-ci.org/prantlf/requireg
 [3]: http://badge.fury.io/js/requireg
 
